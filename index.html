@@ -2,7 +2,7 @@
 <html lang="en" class="dark-theme">
 
 <script>
-const GEMINI_API_KEY = "YOUR_API_KEY";
+const GEMINI_API_KEY = "YOUR_API_LEY";
 let lastUserInput = "";
 const coursesMap = {};
 </script>
@@ -1186,13 +1186,13 @@ const coursesMap = {};
         console.log('Instructor Rating:', { score: ratingScore, weight: preferences.care_instructor_rating });
       }
       if (course['Topics of Interest'] && preferences.topics) {
-               const courseTopics = new Set(course['Topics of Interest'].split(';').map(t => t.trim().toLowerCase()));
-        const userTopics = new Set(preferences.topics.split(';').map(t => t.trim().toLowerCase()));
-        const common = [...userTopics].filter(t => courseTopics.has(t)).length;
-        const topicScore = userTopics.size > 0 ? common / userTopics.size : 0;
-        addScore(parseFloat(preferences.care_topics), topicScore);
-        console.log('Topics:', { score: topicScore, weight: preferences.care_topics });
-      }
+  const courseTopics = new Set(course['Topics of Interest'].split(';').map(t => t.trim().toLowerCase()));
+  const userTopics = new Set(preferences.topics.split(';').map(t => t.trim().toLowerCase()));
+  // OR condition: if at least one topic matches, assign a full score of 1; otherwise 0.
+  const topicScore = [...userTopics].some(t => courseTopics.has(t)) ? 1 : 0;
+  addScore(parseFloat(preferences.care_topics), topicScore);
+  console.log('Topics:', { score: topicScore, weight: preferences.care_topics });
+}
       if (course['Popularity'] && preferences.popularity) {
         const coursePopularity = normalizeNumber(course['Popularity']);
         const userPopularity = preferences.popularity.toLowerCase();
