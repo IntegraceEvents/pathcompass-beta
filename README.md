@@ -80,9 +80,7 @@ We created a **scoring algorithm** to rank courses based on user preferences:
    - **Pass Rate, Instructor Rating, Assessment Structure, Popularity** → **Normalized & Weighted**  
    - **Topics of Interest Matching** → **Jaccard Similarity Calculation**  
    - The final **match score** is computed as:  
-     $$ 
-\text{Final Score} = \sum_{i=1}^{n} (\text{Parameter Score}_i)
-$$
+    The final score is given by $ \text{Final Score} = \sum_{i=1}^{n} (\text{Parameter Score}_i) $.
 
 4. **AI Enhancements:**  
    - **Gemini AI extracts preferences** from natural language input.  
