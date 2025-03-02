@@ -80,7 +80,8 @@ We created a **scoring algorithm** to rank courses based on user preferences:
    - **Pass Rate, Instructor Rating, Assessment Structure, Popularity** → **Normalized & Weighted**  
    - **Topics of Interest Matching** → **Jaccard Similarity Calculation**  
    - The final **match score** is computed as:  
-    The final score is given by $ \text{Final Score} = \sum_{i=1}^{n} (\text{Parameter Score}_i) $.
+    <img width="167" alt="image" src="https://github.com/user-attachments/assets/3bdc9232-88c4-451e-a0fe-21d717fa8c85" />
+
 
 4. **AI Enhancements:**  
    - **Gemini AI extracts preferences** from natural language input.  
@@ -140,44 +141,37 @@ Each course receives a **match score (0-100%)**, calculated as follows:
 
 ### **1. Parameter Normalization**
 Each numeric value is normalized between 0 and 1 using:
-\[
-\text{Normalized Value} = \frac{\text{Value} - \text{Min Value}}{\text{Max Value} - \text{Min Value}}
-\]
+<img width="318" alt="image" src="https://github.com/user-attachments/assets/9b56a3aa-8a6d-47ec-929b-08868a51076f" />
+
 
 ### **2. Parameter Score Calculation**
 Each parameter contributes to the total score. The formula for each parameter’s contribution:
 
-\[
-\text{Parameter Score} = \left( \frac{\text{Parameter Match Score} \times \text{Parameter Weight}}{\text{Total Weight}} \right) \times 100
-\]
+<img width="502" alt="image" src="https://github.com/user-attachments/assets/c29394c3-877b-4b23-9094-718bd637454d" />
 
 ### **3. Topics of Interest Matching (Jaccard Similarity)**
 For **Topics of Interest**, partial matching is computed using **word-based Jaccard similarity**:
 
-\[
-J(T_{\text{user}}, T_{\text{course}}) = \frac{|T_{\text{user}} \cap T_{\text{course}}|}{|T_{\text{user}} \cup T_{\text{course}}|}
-\]
+<img width="238" alt="image" src="https://github.com/user-attachments/assets/2c858b2c-14ac-47ff-b63b-45a8184adca7" />
+
 
 Where:  
-- \( T_{\text{user}} \) = User-provided topic tags  
-- \( T_{\text{course}} \) = Course topic tags  
-- \( | \cdot | \) = Count of words  
+<img width="230" alt="image" src="https://github.com/user-attachments/assets/ca95f615-cdde-4a83-9f93-197e9249e4b7" />
+
 
 Example:  
 User input: **"Software Engineering"**  
 Course tag: **"Software Security"**  
-\[
-J = \frac{1}{3} = 0.33
-\]
+<img width="95" alt="image" src="https://github.com/user-attachments/assets/eb7642b3-2a55-41c2-a9a3-302a40424b49" />
+
 
 If at least **one word matches**, the score is partially credited.
 
 ### **4. Final Match Score**
 The final match score is calculated as the weighted sum of all parameter scores:
 
-\[
-\text{Final Score} = \sum_{i=1}^{n} (\text{Parameter Score}_i)
-\]
+<img width="250" alt="image" src="https://github.com/user-attachments/assets/ead36b69-9444-42d9-a070-a7966d12e38c" />
+
 
 ---
 
