@@ -226,6 +226,8 @@ After installation, **enable the extension** before using the "Ask AI" feature.
   - [Playfair Display](https://fonts.google.com/specimen/Playfair+Display)  
 - **CSS Frameworks & Icon Libraries:**  
   - [Bootstrap 5.3.2](https://getbootstrap.com/)  
-  - [Font Awesome 6.0.0](https://fontawesome.com/)  
+  - [Font Awesome 6.0.0](https://fontawesome.com/)
+- **JavaScript Libraries:**  
+  - [PapaParse 5.3.2](https://www.papaparse.com/)
 
 
