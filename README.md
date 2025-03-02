@@ -37,7 +37,7 @@ Thus, **PATH Compass** was created by us during the HackTheBurgh – app, that l
 To build PATH Compass, we used:  
 - **Frontend:** HTML, CSS, JavaScript (Just for demo purposes. In a realistic scenario, backend would be implemented with server-side processing)  
 - **Data processing:** JavaScript & **PapaParse.js** (for CSV handling)  
-- **AI features:** Google **Gemini Flash API** (for natural language processing & explanations)  
+- **AI features:** Google **Gemini Flash API** (for natural language processing & explanations)  & ChatGPT (for the code optimisation)
 - **Data storage:** A **static CSV file** (as a placeholder for a real database or API)  
 
 ### **3. Algorithm development**  
