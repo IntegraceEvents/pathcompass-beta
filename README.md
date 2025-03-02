@@ -221,7 +221,7 @@ After installation, **enable the extension** before using the "Ask AI" feature.
 
 ---
 
-## **Team Members:**
+## **Contributors:**
 - Shlok Gupta  
 - Matvii Yatsenko  
 - Yufeng Xia  
