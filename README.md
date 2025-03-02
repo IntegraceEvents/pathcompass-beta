@@ -140,7 +140,7 @@ We created a **scoring algorithm** to rank courses based on user preferences:
 Each course receives a **match score (0-100%)**, calculated as follows:
 
 ### **1. Parameter Normalization**
-Each numeric value is normalized between 0 and 1 using:
+Each numeric value is normalized between 0 and 1 using:<br>
 <img width="318" alt="image" src="https://github.com/user-attachments/assets/9b56a3aa-8a6d-47ec-929b-08868a51076f" />
 
 
