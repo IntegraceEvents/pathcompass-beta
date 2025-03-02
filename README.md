@@ -13,7 +13,7 @@ PATH Compass is a prototype course match calculator designed to help users compa
 ---
 ## **Backstory: Why we created PATH Compass**  
 
-As students, we often found it **difficult to choose courses** that matched our interests, workload preferences, and strengths. University course descriptions can be **vague**, and official databases don’t provide easy ways to **compare** courses based on individual priorities.  
+As a new students, we often found it **difficult to choose courses** that matched our interests, workload preferences, and strengths. University course descriptions can be **vague**, and official databases don’t provide easy ways to **compare** courses based on individual priorities.  
 
 When discussing this with peers, we realised that **many students faced the same issue**—spending hours **researching courses**, manually comparing assessment structures, pass rates, and instructor ratings.  
 
@@ -87,7 +87,7 @@ We created a **scoring algorithm** to rank courses based on user preferences:
    - **Gemini AI provides reasoning** on why a course is a good match.  
    - **"Ask AI" fetches external course details** and answers user queries.  
 
-5. **Results Displayed:**  
+5. **Results displayed:**  
    - Courses are **ranked by match score**.  
    - Users can view **detailed explanations** and ask additional questions.  
 
