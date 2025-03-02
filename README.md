@@ -234,5 +234,5 @@ After installation, **enable the extension** before using the "Ask AI" feature.
 - [GeeksforGeeks](https://www.geeksforgeeks.org/)  
 - [W3Schools](https://www.w3schools.com/)  
 - [ChatGPT](https://chatgpt.com/)  
-- [Google AI](https://ai.google.dev/)  
+- [Gemini API](https://ai.google.dev/)  
 
