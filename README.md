@@ -5,6 +5,9 @@
 **Status:** Beta (Prototype)  
 **License:** MIT  
 
+<img width="1440" alt="image" src="https://github.com/user-attachments/assets/50d0a454-db33-4a8b-bf16-a8742796bf2a" />
+
+
 ---
 
 ## **Overview**  
