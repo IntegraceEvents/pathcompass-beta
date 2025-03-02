@@ -222,15 +222,17 @@ After installation, **enable the extension** before using the "Ask AI" feature.
 ---
 
 ## **Team Members:**
-Shlok Gupta
-Matvii Yatsenko
-Yufeng Xia
-Danylo Khrystenko
-Daniel Hornung
+- Shlok Gupta  
+- Matvii Yatsenko  
+- Yufeng Xia  
+- Danylo Khrystenko  
+- Daniel Hornung  
+
 ---
 
-## **References**
-https://www.geeksforgeeks.org/
-https://www.w3schools.com/
-https://chatgpt.com/
-https://ai.google.dev/
+## **References**  
+- [GeeksforGeeks](https://www.geeksforgeeks.org/)  
+- [W3Schools](https://www.w3schools.com/)  
+- [ChatGPT](https://chatgpt.com/)  
+- [Google AI](https://ai.google.dev/)  
+
