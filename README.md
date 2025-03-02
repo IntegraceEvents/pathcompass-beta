@@ -14,7 +14,7 @@
 PATH Compass is a prototype course match calculator designed to help users compare and select university courses based on their preferences. Users can specify their preferences in natural language or manually adjust various parameters such as pass rate, assessment structure, instructor rating, popularity, and topics of interest. The system calculates a match score for each course using an algorithm and ranks them accordingly. In the future, the system can be easily modified to accept interest from prospective students to help them choose an appropriate degree with an university easily.
 
 ---
-## **Backstory: Why we created PATH Compass**  
+## **Backstory: why we created PATH Compass**  
 
 As a new students, we often found it **difficult to choose courses** that matched our interests, workload preferences, and strengths. University course descriptions can be **vague**, and official databases don’t provide easy ways to **compare** courses based on individual priorities.  
 
@@ -29,11 +29,11 @@ Thus, **PATH Compass** was created by us during the HackTheBurgh – app, that l
 
 ## **Development process: how we built it**  
 
-### **1. Planning & Research**  
+### **1. Planning & research**  
 - We first identified **key factors students care about** when choosing courses (e.g., **pass rate, instructor rating, assessment structure, topics of interest, popularity**).  
-- We reviewed **existing and provided to us course databases** (like DRPS at the University of Edinburgh) and realized that there’s **no structured way to compare courses easily**.  
+- We reviewed **existing and provided to us course databases** (like DRPS at the University of Edinburgh) and realised that there’s **no structured way to compare courses easily**.  
 
-### **2. Choosing technologies**  
+### **2. Tech stack**  
 To build PATH Compass, we used:  
 - **Frontend:** HTML, CSS, JavaScript (Just for demo purposes. In a realistic scenario, backend would be implemented with server-side processing)  
 - **Data processing:** JavaScript & **PapaParse.js** (for CSV handling)  
@@ -42,7 +42,7 @@ To build PATH Compass, we used:
 
 ### **3. Algorithm development**  
 We created a **scoring algorithm** to rank courses based on user preferences:  
-- **Normalized values** are computed for parameters like **pass rate, instructor rating, and assessment distribution**.  
+- **Normalised values** are computed for parameters like **pass rate, instructor rating, and assessment distribution**.  
 - **Weighted scoring** assigns different importance levels to each parameter.  
 - **Topics of interest matching** uses **Jaccard similarity** to allow **partial matches** (e.g., “Software Engineering” partially matching “Software Security”).  
 
@@ -70,16 +70,16 @@ We created a **scoring algorithm** to rank courses based on user preferences:
 
 ---
 
-## **Technical Overview**  
+## **Technical overview of a user journey**  
 1. **User inputs preferences:**  
    - They can either type a **natural language request** or manually adjust parameters.  
 
 2. **Data processing & matching algorithm:**  
    - The system **loads course data from a CSV file** (in a real deployment, this would be replaced by a **live university API**).  
-   - Each course is assigned a **match score (0-100%)** based on the **user’s preferences** and **normalized values**.  
+   - Each course is assigned a **match score (0-100%)** based on the **user’s preferences** and **normalised values**.  
 
 3. **Scoring breakdown:**  
-   - **Pass Rate, Instructor Rating, Assessment Structure, Popularity** → **Normalized & Weighted**  
+   - **Pass Rate, Instructor Rating, Assessment Structure, Popularity** → **Normalised & weighted**  
    - **Topics of interest matching** → **Jaccard similarity calculation**  
    - The final **match score** is computed with a formula:  
     <img width="167" alt="image" src="https://github.com/user-attachments/assets/3bdc9232-88c4-451e-a0fe-21d717fa8c85" />
@@ -103,7 +103,7 @@ We created a **scoring algorithm** to rank courses based on user preferences:
 - Automatically assigns importance weightings (0-100%) to relevant parameters.
 - Supports auto-filling for pass rate, assessment ratio, number of assessments, instructor rating, popularity, and topics of interest.
 
-### **2. Customizable Course Matching Parameters**
+### **2. Customisable course matching parameters**
 - Users can manually adjust:
   - Pass rate (Low, Medium, High)
   - Assessment distribution (Exam, Individual, Group)
@@ -113,16 +113,16 @@ We created a **scoring algorithm** to rank courses based on user preferences:
   - Popularity level (Low, Medium, High)
   - Gender distribution
 
-### **3. Real-time Match Score Calculation**
+### **3. Real-time match score calculation**
 - The system assigns a match percentage based on **user preferences and course attributes**.
 - Supports partial matches for **Topics of Interest**, computing similarity using a **Jaccard-based approach**.
 - Generates a ranked list of courses based on scores.
 
-### **4. Course Details & Reasoning Explanation**
+### **4. Course details & reasoning explanation**
 - Each course has a **detailed breakdown** of attributes.
 - Users can request a **human-friendly explanation** (via Gemini AI) on why a course is a good match.
 
-### **5. "Ask About Course" Feature**
+### **5. "Ask About Course" feature**
 - Users can **ask questions** about a course.
 - The system retrieves **course details** and fetches data from an official course website.
 - Answers are generated via Gemini AI.
@@ -133,8 +133,8 @@ We created a **scoring algorithm** to rank courses based on user preferences:
 
 Each course receives a **match score (0-100%)**, calculated as follows:
 
-### **1. Parameter normalization**
-Each numeric value is normalized between 0 and 1 using:<br>
+### **1. Parameter normalisation**
+Each numeric value is normalised between 0 and 1 using:<br>
 <img width="318" alt="image" src="https://github.com/user-attachments/assets/9b56a3aa-8a6d-47ec-929b-08868a51076f" />
 
 
@@ -174,18 +174,21 @@ The final match score is calculated as the weighted sum of all parameter scores:
    - The current dataset is **not real** and cannot be currently used by **University of Edinburgh (UoE) students**.
    - In a real scenario, data would need to come from **UoE’s official API**.
 
-2. **AI not implemented in decision-making**  
+2. **Better program structure**
+   - Due to our lack of experience, as of now, we have all script stored in one single HTML file. In the future, we should optimise it to make the code more professional and easier to fix.
+
+3. **AI not implemented in decision-making**  
    - The **matching algorithm is purely rule-based**.
    - AI **does not** influence the scoring process.
-   - **Topics of Interest matching is non-AI-based**, meaning:
+   - **Topics of interest matching is non-AI-based**, meaning:
      - **"Software Engineering" ≠ "Web Development"**
      - Only **word overlap** is considered.
 
-3. **Static CSV database**  
+4. **Static CSV database**  
    - Course data is **loaded from a static CSV file**.
    - In a real-world system, an **API should be used** to update courses **daily**.
 
-4. **CORS violation in "Ask AI" feature**  
+5. **CORS violation in "Ask AI" feature**  
    - The **"Ask AI"** feature fetches course details from the **DRPS website**, which is on a different domain.  
    - Browsers block these requests due to **CORS policies**, requiring users to install a **CORS extension** (e.g., **Allow CORS** for Chrome).  
    - In a **real-world scenario**, this could be resolved by using a **server-side proxy** (e.g., **Node.js with Express**) to handle requests securely.
