@@ -220,5 +220,12 @@ After installation, **enable the extension** before using the "Ask AI" feature.
 - [GeeksforGeeks](https://www.geeksforgeeks.org/)  
 - [W3Schools](https://www.w3schools.com/)  
 - [ChatGPT](https://chatgpt.com/)  
-- [Gemini API](https://ai.google.dev/)  
+- [Gemini API](https://ai.google.dev/)
+- **Fonts:**  
+  - [Montserrat](https://fonts.google.com/specimen/Montserrat) 
+  - [Playfair Display](https://fonts.google.com/specimen/Playfair+Display)  
+- **CSS Frameworks & Icon Libraries:**  
+  - [Bootstrap 5.3.2](https://getbootstrap.com/)  
+  - [Font Awesome 6.0.0](https://fontawesome.com/)  
+
 
