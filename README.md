@@ -93,13 +93,6 @@ We created a **scoring algorithm** to rank courses based on user preferences:
 
 ---
 
-## **Future improvements**  
-- **Switch from static CSV to a live API** for real-time course updates.  
-- **Use AI embeddings (e.g., Word2Vec, BERT)** for **better topic matching**.  
-- **Implement a backend with Node.js** to handle **CORS issues** and improve **data security**.  
-
----
-
 ## **Features**  
 
 ### **1. Smart preference setter (AI-powered input processing)**
@@ -173,7 +166,7 @@ The final match score is calculated as the weighted sum of all parameter scores:
 
 ---
 
-## **Weaknesses & Limitations**
+## **Future improvements**
 1. **Synthetic dataset**  
    - The current dataset is **not real** and cannot be currently used by **University of Edinburgh (UoE) students**.
    - In a real scenario, data would need to come from **UoE’s official API**.
@@ -193,14 +186,6 @@ The final match score is calculated as the weighted sum of all parameter scores:
    - The **"Ask AI"** feature fetches course details from the **DRPS website**, which is on a different domain.  
    - Browsers block these requests due to **CORS policies**, requiring users to install a **CORS extension** (e.g., **Allow CORS** for Chrome).  
    - In a **real-world scenario**, this could be resolved by using a **server-side proxy** (e.g., **Node.js with Express**) to handle requests securely.
-
----
-
-## **Future improvements**
-- **Replace static CSV with an API for real-time course updates**.
-- **Improve AI-based decision-making in match calculations**.
-- **Enhance Topics of Interest matching with AI-based embeddings** (e.g., NLP similarity instead of simple Jaccard overlap).
-- **Allow users to choose AI models for reasoning (Flash vs. Pro models).**
 
 ---
 
